@@ -6,13 +6,13 @@ const tweetRouter = require('./routes/tweet.routes')
 const vidoeRouter = require('./routes/video.routes')
 const playlistRouter = require('./routes/playlist.routes')
 const commentRouter = require('./routes/comment.routes')
+const likeRouter = require('./routes/like.routes')
 
 const app = express();
 
 app.use(cors({
     origin: process.env.CORS_ORIGIN
 }))
-
 app.use(express.json({
     limit: "40kb"
 }))
@@ -25,6 +25,6 @@ app.use('/api/v1/tweet', tweetRouter)
 app.use('/api/v1/video', vidoeRouter)
 app.use('/api/v1/playlist', playlistRouter)
 app.use('/api/v1/comment', commentRouter)
-
+app.use('/api/v1/like', likeRouter)
 
 module.exports = app; 
