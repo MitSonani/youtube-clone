@@ -5,6 +5,7 @@ const userRouter = require('./routes/user.routes')
 const tweetRouter = require('./routes/tweet.routes')
 const vidoeRouter = require('./routes/video.routes')
 const playlistRouter = require('./routes/playlist.routes')
+const commentRouter = require('./routes/comment.routes')
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use('/api/v1/user', userRouter)
 app.use('/api/v1/tweet', tweetRouter)
 app.use('/api/v1/video', vidoeRouter)
 app.use('/api/v1/playlist', playlistRouter)
+app.use('/api/v1/comment', commentRouter)
 
 
 module.exports = app; 
